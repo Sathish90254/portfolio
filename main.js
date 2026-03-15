@@ -220,9 +220,7 @@ const form = document.querySelector('.contact-form');
 
 if (form) {
 
-    form.addEventListener('submit', (e) => {
-
-        e.preventDefault();
+    form.addEventListener('submit', () => {
 
         anime({
             targets: '.submit-btn',
@@ -232,8 +230,7 @@ if (form) {
         });
 
         setTimeout(() => {
-            alert("Thank you! I'll contact you soon.");
-            form.reset();
+            alert("Message sent successfully!");
         }, 1000);
 
     });
